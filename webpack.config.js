@@ -10,7 +10,9 @@ module.exports = {
     'angular2': [
       'rxjs',
       'reflect-metadata',
-      '@angular/core'
+      '@angular/core',
+      '@angular/http',
+      '@angular/platform-browser-dynamic'
     ],
     'app': './app/app'
   },
