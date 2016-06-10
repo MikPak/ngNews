@@ -8,8 +8,6 @@ module.exports = {
 
   entry: {
     'angular2': [
-      'rxjs',
-      'reflect-metadata',
       '@angular/core'
     ],
     'app': './app/app'
