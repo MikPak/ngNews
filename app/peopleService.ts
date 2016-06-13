@@ -6,7 +6,7 @@ import 'rxjs/Rx';
 export class PeopleService {
     people : any;
     constructor(http:Http) {
-        this.people = http.get('../api/people.json')
+        this.people = http.get('http://high.fi/uutiset/json')
             .map(response => response.json());
     }
 }

@@ -3,19 +3,13 @@ import {HTTP_PROVIDERS, Http} from '@angular/http'
 
 @Component({
     selector: 'my-person',
-    inputs: ['name'],
-    outputs: ['hello'],
+    inputs: ['author', 'feed'],
     template: `
     <div>
-      <span>{{name}}</span>
-      <button (click)="sayHello()">Say Hello</button>
+      <span>{{author}}</span>
     </div>
   `
 })
 export class Person {
-    name : any;
-    hello = new EventEmitter();
-    sayHello(e) {
-        this.hello.next(this.name);
-    }
+    author : any;
 }

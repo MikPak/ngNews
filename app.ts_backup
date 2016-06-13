@@ -11,6 +11,9 @@ enableProdMode();
   selector: 'my-app',
   providers: [PeopleService],
   template: `<my-person *ngFor="let person of generateArray(people)">
+              <li *ngFor="let b of generateArray(person)">
+                <b *ngFor="let a of generateArray(b)[5]">{{a.title}}</b>
+              </li>
             </my-person>`
 })
 
