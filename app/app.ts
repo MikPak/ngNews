@@ -41,7 +41,7 @@ export class App {
         .subscribe(
             people => this.people = people,
             error => console.error('Error: ' + error),
-            () => console.log('YOLO')
+            () => console.log('Completed fetching JSON')
         );
   }
 
