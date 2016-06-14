@@ -1,5 +1,5 @@
 {
-  "name": "image-size-calculator",
+  "name": "ngNews",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "watch": "webpack --watch --progress --profile --colors --display-error-details --display-cached",
     "electron": "electron app"
   },
-  "author": "Auth0",
+  "author": "Mikko Pakkanen",
   "license": "MIT",
   "devDependencies": {
     "electron-prebuilt": "^1.2.0",
