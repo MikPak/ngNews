@@ -5,12 +5,30 @@
     <script src="../node_modules/es6-shim/es6-shim.min.js"></script>
     <script src="../node_modules/zone.js/dist/zone.js"></script>
     <script src="../node_modules/reflect-metadata/Reflect.js"></script>
+    <script>
+      function myFunction() {
+        var links = document.links;
+        event.preventDefault();
+        for(var i=0;i<links.length;i++){
+            links[i].onclick = function(){
+              event.preventDefault();
+              var shell = require('electron').shell;
+              shell.openExternal(this.href);
+            };
+        }
+        //alert(obj.href);
+          //var shell = require('electron').shell;
+       //event.preventDefault();
+        //shell.openExternal('https://github.com');
+      }
+    </script>
   </head>
   <body>
     <div class="container">
       <my-app>Loading...</my-app>
     </div>
 
+    <script>window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.min.js');</script>
     <script src="../build/common.js"></script>
     <script src="../build/angular2.js"></script>
     <script src="../build/app.js"></script>

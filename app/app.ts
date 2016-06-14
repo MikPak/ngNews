@@ -3,15 +3,35 @@ import {bootstrap} from '@angular/platform-browser-dynamic'
 import {HTTP_PROVIDERS, Http} from '@angular/http'
 import 'rxjs/Rx'
 import {PeopleService} from './peopleService'
-import {Person} from './person'
 
 enableProdMode();
 
 @Component({
   selector: 'my-app',
   providers: [PeopleService],
-  template: `<my-person *ngFor="let person of generateArray(people)">
-            </my-person>`
+  template: `<style>
+                h2.newsTitle {
+                  font-weight: bold;
+                  margin-bottom: 0;
+                }
+                h2.newsTitle a {
+                  color: #000;
+                  text-decoration: none;
+                }
+                p.newsMetaData {
+                  margin-top: 0.5em;
+                }
+             </style>
+            <div *ngFor="let person of generateArray(people)">
+              <div *ngFor="let b of generateArray(person)">
+                <div *ngFor="let a of generateArray(b)[5]">
+                  <h2 class='newsTitle'>
+                    <a href='{{a.link}}' onclick='myFunction()'>{{a.title}}</a>
+                  </h2>
+                  <p class="newsMetaData">{{a.author}} - {{a.publishedDate}}</p>
+                </div>
+              </div>
+            </div>`
 })
 
 export class App {
@@ -21,18 +41,12 @@ export class App {
         .subscribe(
             people => this.people = people,
             error => console.error('Error: ' + error),
-            () => console.log('Completed')
+            () => console.log('YOLO')
         );
   }
 
   generateArray(obj){
-    //console.log(obj.responseData);
-    //console.log('generateArray: ' + obj);
-    //console.log(Object.keys(obj.responseData).map((key)=>{ return obj[key]}));
-
-    let tmp = Object.keys(obj).map((key)=>{ return obj[key]});
-    console.log(tmp);
-    return tmp;
+    return Object.keys(obj).map((key)=>{ return obj[key]});
   }
 }
 
