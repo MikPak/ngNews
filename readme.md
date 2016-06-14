@@ -2,6 +2,8 @@
 
 ngNews is simple [Electron](http://electron.atom.io/)/[Angular2](https://angular.io/)  (also using [TypeScript](http://www.typescriptlang.org/)) desktop-application for demonstrating how to fetch JSON-data from server using http.get (in this example we are using news-site called [High.fi](http://high.fi/) to get our news-data) and showing it in very minimalistic view. Clicking links will open them in system default browser.
 
+![ngNews mainview](https://github.com/MikPak/ngNews/blob/master/mainview.png "ngNews mainview")
+
 ## Install
 
 Clone this repo and execute in your favourite shell:
