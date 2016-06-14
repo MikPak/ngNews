@@ -14,3 +14,6 @@ Clone this repo and execute in your favourite shell:
 * `npm run electron` to run the app
 
 You may execute `npm run watch` in one shell window and `npm run electron` in another in order to watch for changes in code and easily re-run the app.
+
+## Author
+[Mikko Pakkanen](http://mikkopakkanen.com)
